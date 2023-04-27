@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import albumentations
 import cv2
-import DogDataset
+import PotatoDataset
 from PIL import Image
 import torch
 import torch.nn as nn
@@ -143,14 +143,14 @@ def run_model(data, epochs=10, learning_rate=1e-4, batch_size=8, weight_decay=1e
     targets = data[CLASS_NAMES].values
     x_train, x_test, y_train, y_test = train_test_split(data['images'], targets, test_size=0.20, random_state=42)
     
-    train_dataset = DogDataset.ClassificationDataset(
+    train_dataset = PotatoDataset.ClassificationDataset(
             image_paths=x_train.values,
             targets=y_train,
             resize=(256,256),
             augmentations=None
         )
     
-    valid_dataset = DogDataset.ClassificationDataset(
+    valid_dataset = PotatoDataset.ClassificationDataset(
             image_paths=x_test.values,
             targets=y_test,
             resize=(256,256),
