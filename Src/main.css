@@ -1,0 +1,88 @@
+img {
+  max-width: 244px;
+}
+
+.wrapper {
+  max-height: 100vh;
+}
+
+.loading {
+  width: 50px;
+  height: auto;
+}
+
+/* (A) PROGRESS BAR WRAPPER */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.prog-wrap {
+  position: relative;
+  border: 1px solid #acb2d8;
+  background: rgba(255, 255, 255, 0.3);
+}
+.prog-wrap, .prog-bar, .prog-percent { height: 30px; }
+
+/* (B) PROGRESS BAR & PERCENTAGE */
+.prog-bar, .prog-percent {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+/* (C) PERCENTAGE INDICATOR */
+.prog-percent {
+  display: flex;
+  align-items: center; justify-content: right;
+  width: 100%;
+  z-index: 2;
+}
+
+/* (D) PROGRESS BAR */
+.prog-bar {
+  width: 0;
+  background: rgba(255, 47, 47, 0.5);
+  transition: width 0.5s;
+}
+
+/* (X) DOES NOT MATTER */
+/* TEST CONTROLS */
+#demoA { margin-top: 20px; }
+#demoA input, #demoA button { padding: 10px; }
+
+/* PAGE & BODY */
+body {
+  display: flex;
+  align-items: center; justify-content: center;
+  min-height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzU0MzQ1OA&ixlib=rb-1.2.1&q=85);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* WIDGET */
+.widget-wrap {
+  margin-right: 50px;
+  margin-top: 50px;
+  min-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+
+/* FOOTER */
+#code-boxx {
+  font-weight: 600;
+  margin-top: 50px;
+}
+#code-boxx a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  background: #b90a0a;
+  color: #fff;
+}
+#code-boxx , h1 { text-align: center; }
+
